@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #eaeaea;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 320px;
+    background: #1e1e1e;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.top {
+    display: flex;
+    gap: 10px;
+}
+
+#display {
+    flex: 1;
+    height: 60px;
+    font-size: 26px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: black;
+    color: white;
+}
+
+.theme-btn {
+    width: 45px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 55px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* NUMBERS IN WHITE */
+button:not(.operator):not(.equal):not(.theme-btn) {
+    background: #333;
+    color: white;
+}
+
+.operator {
+    background: orange;
+    color: white;
+}
+
+.equal {
+    background: green;
+    color: white;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/* LIGHT MODE */
+.light {
+    background: #ffffff;
+}
+
+.light .calculator {
+    background: #f2f2f2;
+}
+
+.light #display {
+    background: white;
+    color: black;
+}
+
+.light button:not(.operator):not(.equal):not(.theme-btn) {
+    background: #ddd;
+    color: black;
+}
